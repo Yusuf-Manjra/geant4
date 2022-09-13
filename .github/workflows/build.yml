@@ -50,10 +50,10 @@ jobs:
       - name: Run build-wrapper
         run: |
           cd ../
-          mkdir build-geant4
-          mkdir install-geant4
-          cd build-geant4
-          cmake -DCMAKE_INSTALL_PREFIX=../install-geant4 ../geant4
+          mkdir build
+          mkdir install
+          cd build
+          cmake -DCMAKE_INSTALL_PREFIX=../install ../geant4
           build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }}  cmake --build build --
       - name: Run sonar-scanner
         env:
