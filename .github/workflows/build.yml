@@ -49,11 +49,11 @@ jobs:
           echo "$HOME/.sonar/build-wrapper-linux-x86" >> $GITHUB_PATH
       - name: Run build-wrapper
         run: |
-          cd ../
+          cd /home/runner/work
           mkdir build
           mkdir install
           cd build
-          cmake -DCMAKE_INSTALL_PREFIX= ../install ../geant4
+          cmake -DCMAKE_INSTALL_PREFIX=/home/runner/work/install /home/runner/work/geant4
           build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }}  make -j2
       - name: Run sonar-scanner
         env:
