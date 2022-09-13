@@ -49,7 +49,7 @@ jobs:
           echo "$HOME/.sonar/build-wrapper-linux-x86" >> $GITHUB_PATH
       - name: Run build-wrapper
         run: |
-          cd../
+          cd ../
           mkdir build
           mkdir install
           cd build
