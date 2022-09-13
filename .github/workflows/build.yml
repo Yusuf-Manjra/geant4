@@ -52,7 +52,7 @@ jobs:
           mkdir build
           mkdir install
           cd build
-          cmake -DCMAKE_INSTALL_PREFIX=../install ../geant4
+          cmake -DCMAKE_INSTALL_PREFIX= ../install ../
           build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }}  cmake --build build --
       - name: Run sonar-scanner
         env:
